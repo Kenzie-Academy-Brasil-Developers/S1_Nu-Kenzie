@@ -1,10 +1,10 @@
 import "./styles.css"
 
-const Header = () => {
+const Header = ({handlePages, logoBlack}) => {
     return (
         <header>
-            <img src="" alt="Nu Kenzie"/>
-            <button>Início</button>
+            <img src={logoBlack} alt="Nu Kenzie"/>
+            <button type="button" onClick={handlePages}>Início</button>
         </header>
     )
 }

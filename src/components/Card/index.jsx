@@ -3,9 +3,15 @@ import { FaTrash } from "react-icons/fa"
 
 // key={index} transaction={transaction}
 
-const Card = ({transaction}) => {
+const Card = ({transaction, listTransactions, setListTransactions}) => {
 
     const {description, value, type} = transaction
+
+    console.log(transaction)
+
+    const deleteCard = (uuid) => {
+        setListTransactions(listTransactions.filter(transaction => transaction.id !== uuid))
+    }
 
     return (
         <li className={type}>
@@ -13,8 +19,8 @@ const Card = ({transaction}) => {
                 <h2>{description}</h2>
                 <span>{type}</span>
             </div>
-            <span>R$ {value}</span>
-            <button type="button">
+            <span>R$ {value.toFixed(2)}</span>
+            <button type="button" onClick={() => deleteCard(transaction.id)}>
                 <FaTrash />
             </button>
         </li>

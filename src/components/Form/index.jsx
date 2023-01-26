@@ -33,7 +33,7 @@ const Form = ({ listTransactions, setListTransactions }) => {
         type="text"
         id="value"
         placeholder="1"
-        onChange={(event) => setValue(event.target.value)}
+        onChange={(event) => setValue(Number(event.target.value))}
       />
       <span>R$</span>
 
