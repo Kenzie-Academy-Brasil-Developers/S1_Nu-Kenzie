@@ -1,0 +1,158 @@
+:root {
+  --color-primary-1: #fd377e;
+  --color-primary-2: #e34981;
+  --color-secondary-1: #03b898;
+  --color-grey-1: #f8f9fa;
+  --color-grey-2: #e9ecef;
+  --color-grey-3: #343a40;
+  --color-grey-4: #212529;
+  --color-grey-5: #868e96;
+  --color-white: #ffffff;
+
+  --font-title-1: 2.375rem; /* 38 pixels */
+  --font-title-2: 1.375rem; /* 22 pixels */
+  --font-title-3: 1rem; /* 16 pixels  */
+  --font-title-4: 0.75rem; /* 12 pixels */
+  --font-text-1: 1rem; /* 16 pixels */
+  --font-text-2: 0.75rem; /* 12 pixels */
+
+  --font-weight-1: 800;
+  --font-weight-2: 700;
+  --font-weight-3: 600;
+  --font-weight-4: 400;
+
+  --line-heigth-1: 3rem; /* 48 pixels */
+  --line-heigth-2: 2.125rem; /* 34 pixels */
+  --line-heigth-3: 1.875rem; /*  30 pixels */
+  --line-heigth-4: 1.625rem; /* 26 pixels */
+  --line-heigth-5: 1.375rem; /* 22 pixels */
+
+  --radius-1: 2px;
+  --radius-2: 4px;
+  --radius-3: 8px;
+  --radius-4: 16px;
+  --radius-5: 32px;
+  --radius-100: 100%;
+
+  --gap-1: 2rem; /* 32 pixels */
+  --gap-2: 1.75rem; /* 28 pixels */
+  --gap-3: 1.5rem; /*  24 pixels */
+  --gap-4: 1.25rem; /* 20 pixels */
+  --gap-5: 1rem; /* 16 pixels */
+
+  --container-1: 1200px;
+
+  --font-family-1: "Nunito", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: var(--container-1);
+  margin: 0 auto;
+}
+
+/* CONFIGURAÇÕES BASE DE TEXTO */
+* {
+  font-family: var(--font-family-1);
+}
+
+body,
+button,
+input,
+textarea {
+  line-height: var(--line-heigth-5);
+  font-family: var(--font-family-1);
+}
+
+button {
+  font-size: var(--font-text-1);
+}
+
+.title-1 {
+  font-size: var(--font-title-1);
+  font-weight: var(--font-weight-1);
+  line-height: var(--line-heigth-1);
+}
+
+.title-2 {
+  font-size: var(--font-title-2);
+  font-weight: var(--font-weight-2);
+  line-height: var(--line-heigth-2);
+}
+
+.title-3 {
+  font-size: var(--font-title-3);
+  font-weight: var(--font-weight-2);
+  line-height: var(--line-heigth-3);
+}
+
+.title-4 {
+  font-size: var(--font-title-4);
+  font-weight: var(--font-weight-3);
+  line-height: var(--line-heigth-4);
+}
+
+.text-1 {
+  font-size: var(--font-text-1);
+  font-weight: var(--font-weight-4);
+  line-height: var(--line-heigth-4);
+}
+
+.text-2 {
+  font-size: var(--font-text-2);
+  font-weight: var(--font-weight-4);
+  line-height: var(--line-heigth-5);
+}
+
+/* BUTTONS */
+.button-pink {
+  background-color: var(--color-primary-1);
+  color: var(--color-white);
+  border-radius: var(--radius-3);
+}
+
+.button-pink:hover {
+  background-color: var(--color-primary-2);
+  color: var(--color-grey-1);
+}
+
+.button-grey {
+  background-color: var(--color-grey-2);
+  color: var(--color-grey-3);
+  border-radius: var(--radius-3);
+}
+
+.button-grey:hover {
+  background-color: var(--color-grey-3);
+  color: var(--color-grey-1);
+}
+
+.button-grey-icon {
+  background-color: var(--color-grey-2);
+  color: var(--color-grey-3);
+  border-radius: var(--radius-1);
+}
+
+.button-grey-icon:hover {
+  background-color: var(--color-grey-3);
+  color: var(--color-grey-1);
+}
+
+/* .button-big {
+  padding: 14px 112px;
+}
+
+.button-medium {
+  padding: 14px 97px;
+}
+
+.button-small {
+  padding: 10px 16px;
+}
+
+.button-icon {
+  padding: 6px 8px;
+} */
