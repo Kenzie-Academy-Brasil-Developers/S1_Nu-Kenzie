@@ -1,15 +1,19 @@
-import Container from "../Container"
-import "./styles.css"
+import "../../styles/globalStyles.css";
+import "./styles.css";
 
-const Header = ({handlePages, logoBlack, children}) => {
-    return (
-        <header>
-            <Container>
-                <img src={logoBlack} alt="Nu Kenzie"/>
-                <button type="button" onClick={handlePages}>Início</button>
-            </Container>
-        </header>
-    )
-}
+import Container from "../Container";
 
-export default Header
+const Header = ({ handlePages, logoBlack, children }) => {
+  return (
+    <header>
+      <Container>
+        <img src={logoBlack} alt="Nu Kenzie" />
+        <button type="button" onClick={handlePages} className="button-grey">
+          Início
+        </button>
+      </Container>
+    </header>
+  );
+};
+
+export default Header;
