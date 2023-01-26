@@ -1,4 +1,5 @@
 import "./styles.css"
+import { FaTrash } from "react-icons/fa"
 
 // key={index} transaction={transaction}
 
@@ -12,8 +13,10 @@ const Card = ({transaction}) => {
                 <h2>{description}</h2>
                 <span>{type}</span>
             </div>
-            <span>R$ {value.toFixed(2)}</span>
-            <button type="button">Deletar</button>
+            <span>R$ {value}</span>
+            <button type="button">
+                <FaTrash />
+            </button>
         </li>
     )
 }

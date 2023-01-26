@@ -7,7 +7,7 @@ const List = ({listTransactions}) => {
         <>
             {listTransactions ?
                 (<ul>
-                    {listTransactions.map((transaction,index) => <Card key={index} transaction={transaction}/>)}
+                    {listTransactions.map((transaction,index) => <Card key={transaction.id} transaction={transaction}/>)}
                 </ul>) 
                 : 
                 (<ul>

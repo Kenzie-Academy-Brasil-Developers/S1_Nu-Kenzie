@@ -5,11 +5,12 @@ import Form from "./components/Form";
 import TotalMoney from "./components/TotalMoney";
 import List from "./components/List";
 import Header from "./components/Header";
+import { v4 as uuid } from 'uuid'
 
-function App() {
+const App = () => {
   const [listTransactions, setListTransactions] = useState([
-    { description: "Salário recebido", type: "entrada", value: 2500 },
-    { description: "Conta de luz", type: "saída", value: -150 },
+    { id: uuid(), description: "Salário recebido", type: "entrada", value: 2500 },
+    { id: uuid(), description: "Conta de luz", type: "saída", value: -150 },
   ]);
 
   return (
@@ -20,7 +21,7 @@ function App() {
           listTransactions={listTransactions}
           setListTransactions={setListTransactions}
         />
-        <TotalMoney listTransactions={listTransactions} />
+        {/* <TotalMoney listTransactions={listTransactions} /> */}
       </aside>
       <main>
         <List listTransactions={listTransactions} />
