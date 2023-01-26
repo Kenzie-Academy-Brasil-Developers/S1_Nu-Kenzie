@@ -1,41 +1,50 @@
-#root {
-  max-width: 1280px;
+body {
+  background-color: var(--color-grey-4);
+
+  color: var(--color-white);
+}
+
+.main__home {
+  width: 95%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.main__home > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-top: 84px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.home__sectionLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 340px;
+}
+
+.home__sectionLeft > img {
+  width: 122px;
+}
+
+.home__sectionLeft > button {
+  padding: 14px 97px;
+}
+
+@media screen and (min-width: 426px) {
+  .main__home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
   }
-  to {
-    transform: rotate(360deg);
+  .main__home > .container {
+    flex-direction: row;
+    align-items: center;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .home__sectionLeft > button {
+    max-width: 240px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

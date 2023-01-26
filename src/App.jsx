@@ -1,11 +1,16 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+
 import "./App.css";
+import "./styles/reset.css"
+import "./styles/globalStyles.css"
+
 import Form from "./components/Form";
 import TotalMoney from "./components/TotalMoney";
 import List from "./components/List";
 import Header from "./components/Header";
+
 import { v4 as uuid } from 'uuid'
+
 import illustation from "./assets/images/Illustration.svg"
 import logoWhite from "./assets/images/Nu Kenzie text white.svg"
 import logoBlack from "./assets/images/Nu Kenzie text black.svg"
@@ -42,16 +47,18 @@ const App = () => {
           </main>
       </>)
       :
-      (<main>
-        <section>
-          <img src={logoWhite} alt="Nu Kenzie Logo" />
-          <h1>Centralize o controle das suas finanças</h1>
-          <span>de forma rápida e segura</span>
-          <button type="button" onClick={handlePages}>Iniciar</button>
-        </section>
-        <section>
-          <img src={illustation} alt="Ilustração da Aplicação" />
-        </section>
+      (<main className="main__home">
+        <div className="container">
+          <section className="home__sectionLeft">
+            <img src={logoWhite} alt="Nu Kenzie Logo" />
+            <h1 className="title-1">Centralize o controle das suas finanças</h1>
+            <span className="text-1">de forma rápida e segura</span>
+            <button type="button" onClick={handlePages} className="button-pink">Iniciar</button>
+          </section>
+          <section className="home__sectionRight">
+            <img src={illustation} alt="Ilustração da Aplicação" />
+          </section>
+        </div>
       </main>)}
 
     </>
