@@ -1,10 +1,17 @@
 import "./styles.css"
+import { FaTrash } from "react-icons/fa"
 
 // key={index} transaction={transaction}
 
-const Card = ({transaction}) => {
+const Card = ({transaction, listTransactions, setListTransactions}) => {
 
     const {description, value, type} = transaction
+
+    console.log(transaction)
+
+    const deleteCard = (uuid) => {
+        setListTransactions(listTransactions.filter(transaction => transaction.id !== uuid))
+    }
 
     return (
         <li className={type}>
@@ -13,7 +20,9 @@ const Card = ({transaction}) => {
                 <span>{type}</span>
             </div>
             <span>R$ {value.toFixed(2)}</span>
-            <button type="button">Deletar</button>
+            <button type="button" onClick={() => deleteCard(transaction.id)}>
+                <FaTrash />
+            </button>
         </li>
     )
 }
