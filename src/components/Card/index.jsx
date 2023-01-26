@@ -1,13 +1,9 @@
 import "./styles.css"
 import { FaTrash } from "react-icons/fa"
 
-// key={index} transaction={transaction}
-
 const Card = ({transaction, listTransactions, setListTransactions}) => {
 
     const {description, value, type} = transaction
-
-    console.log(transaction)
 
     const deleteCard = (uuid) => {
         setListTransactions(listTransactions.filter(transaction => transaction.id !== uuid))
