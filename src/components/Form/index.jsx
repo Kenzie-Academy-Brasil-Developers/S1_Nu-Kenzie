@@ -14,7 +14,6 @@ const Form = ({ listTransactions, setListTransactions }) => {
       ...listTransactions,
       { id: uuid(), description, value, type },
     ]);
-    console.log(listTransactions);
   };
 
   return (

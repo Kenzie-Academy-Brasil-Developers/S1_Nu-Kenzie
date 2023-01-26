@@ -1,7 +1,6 @@
 import "./styles.css"
 
 const TotalMoney = ({listTransactions}) => {
-    console.log(listTransactions)
     return (
         <>
             {listTransactions.length > 0 ? 
