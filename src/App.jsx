@@ -14,6 +14,7 @@ import { v4 as uuid } from 'uuid'
 import illustation from "./assets/images/Illustration.svg"
 import logoWhite from "./assets/images/Nu Kenzie text white.svg"
 import logoBlack from "./assets/images/Nu Kenzie text black.svg"
+import Container from "./components/Container";
 
 const App = () => {
   const [listTransactions, setListTransactions] = useState([
@@ -34,7 +35,7 @@ const App = () => {
     <>
       {page === "Dashboard" ? 
       (<>
-          <Header handlePages={handlePages} logoBlack={logoBlack} />
+          <Header handlePages={handlePages} logoBlack={logoBlack}/>
           <aside>
             <Form
               listTransactions={listTransactions}
@@ -48,7 +49,7 @@ const App = () => {
       </>)
       :
       (<main className="main__home">
-        <div className="container">
+        <Container>
           <section className="home__sectionLeft">
             <img src={logoWhite} alt="Nu Kenzie Logo" />
             <h1 className="title-1">Centralize o controle das suas finanças</h1>
@@ -58,7 +59,7 @@ const App = () => {
           <section className="home__sectionRight">
             <img src={illustation} alt="Ilustração da Aplicação" />
           </section>
-        </div>
+        </Container>
       </main>)}
 
     </>
