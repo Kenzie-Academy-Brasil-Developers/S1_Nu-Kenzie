@@ -1,0 +1,22 @@
+.resume__title {
+    margin-bottom: 28px;
+}
+
+.noCards__warning {
+    margin-bottom: 12px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 364px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 769px) {
+    ul {
+        width: 100%;
+        max-width: 100%;
+    }
+}
